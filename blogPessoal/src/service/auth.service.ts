@@ -13,7 +13,7 @@ export class AuthService {
     private http: HttpClient
   ) { }
   entrar(userLogin:UserLogin): Observable<UserLogin>{
-return this.http.post<UserLogin>('https://blogpessoalrpd.herokuapp.com/usuarios/logar',UserLogin)
+return this.http.post<UserLogin>('https://blogpessoalrpd.herokuapp.com/usuarios/logar',userLogin)
   }
   cadastrar(user:User): Observable<User>{
     return this.http.post<User>('https://blogpessoalrpd.herokuapp.com/usuarios/cadastrar',user)

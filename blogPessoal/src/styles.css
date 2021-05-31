@@ -7,7 +7,7 @@
     /* Colors generated on: https://colorhunt.co/palette/179481 */
     background: linear-gradient(45deg, #1a557c, #3282b8, #0f4c75, #1b262c);
     background-size: 300% 300%;
-    animation: colors 15s ease infinite;
+    animation: colors 8s ease infinite;
   }
 
   @keyframes colors {

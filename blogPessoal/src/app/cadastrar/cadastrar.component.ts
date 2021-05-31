@@ -14,9 +14,10 @@ export class CadastrarComponent implements OnInit {
   user: User = new User
   confirmaSenha: string
   tipoUsuario:string
-  private router: Router
+
   constructor(
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ) { }
 
   ngOnInit() {
