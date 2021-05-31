@@ -3,7 +3,7 @@ export class UserLogin{
   public nome: string
   public usuario: string
   public token: string
-  public senha: number
+  public senha: string
   public foto: string
   public tipo: string
 }

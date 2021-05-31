@@ -1,4 +1,8 @@
+import { AuthService } from './../../service/auth.service';
+
 import { Component, OnInit } from '@angular/core';
+import { User } from '../model/User';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastrar',
@@ -7,9 +11,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastrarComponent implements OnInit {
 
-  constructor() { }
+  user: User = new User
+  confirmaSenha: string
+  tipoUsuario:string
+  private router: Router
+  constructor(
+    private authService: AuthService
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+   window.scroll(0,0)
   }
 
+  confirmeSenha(event:any){
+    this.confirmaSenha = event.target.value
+  }
+  tipoUser(event:any){
+    this.tipoUsuario = event.target.value
+  }
+  cadastrar(){
+    this.user.tipo = this.tipoUsuario
+
+    if(this.user.senha != this.confirmaSenha){
+      alert ('A senhas estão incorretas')
+    }else{
+      this.authService.cadastrar(this.user).subscribe((resp:User) => {
+        this.user = resp
+        this.router.navigate(['/entrar'])
+        alert('Usuario cadastrado com sucesso')
+      })
+    }
+  }
 }
