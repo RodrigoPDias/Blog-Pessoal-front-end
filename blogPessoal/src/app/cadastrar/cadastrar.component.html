@@ -29,8 +29,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label  for="confimSenha">Confime sua senha </label>
-                        <input  [(ngModel)]='user' class="form-control" type="password" name="confimSenha" id="confimSenha" placeholder="Confime sua senha">
+                        <label  for="confimeSenha">Confime sua senha </label>
+                        <input  [(ngModel)]='user.senha' class="form-control" type="password" name="confimeSenha" id="confimeSenha" placeholder="Confime sua senha">
                     </div>
                     <div class="form-group">
                         <label for="tipo">Tipo de Usuario </label>
@@ -43,7 +43,7 @@
                     <br><br>
                     <div class=" d-flex justify-content-center">
                         <button type="submit" routerLink='/entrar' class="btn btn-danger ">Cancelar</button>
-                        <button type="submit" class="btn btn-success" (click)='cadastrar'>Cadastrar</button>
+                        <button type="submit" class="btn btn-success" (click)='cadastrarFinal()'>Cadastrar</button>
                     </div>
                 </div>
                 </div>
