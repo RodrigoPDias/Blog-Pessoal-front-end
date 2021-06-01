@@ -4,5 +4,6 @@ export const environment = {
   nome:'',
   id:0,
   foto:'',
+  senha:'',
   server:"https://blogpessoalrpd.herokuapp.com"
 };

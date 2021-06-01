@@ -14,9 +14,18 @@ export class AuthService {
     private http: HttpClient
   ) { }
   entrar(userLogin:UserLogin): Observable<UserLogin>{
-return this.http.post<UserLogin>(`${environment.server}/usuarios/logar`,userLogin)
+    return this.http.post<UserLogin>(`${environment.server}/usuarios/logar`,userLogin)
   }
   cadastrar(user:User): Observable<User>{
     return this.http.post<User>(`${environment.server}/usuarios/cadastrar`,user)
+  }
+  logado(){
+    let ok = false
+
+    if(environment.token != ''){
+      ok= true
+    }
+
+    return ok
   }
 }
