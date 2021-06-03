@@ -16,7 +16,7 @@
 
           <div class="col-md-6">
             <button class="btn btn-dark">Nova postagem</button>
-            <a class="btn btn-outline-dark" href="#postagens" >Ver postagens</a>
+            <a class="btn btn-outline-dark" (click)='verPostagens()' >Ver postagens</a>
 
           </div>
 
@@ -36,11 +36,11 @@
   <nav>
     <div class="nav nav-tabs d-flex justify-content-center " id="nav-tab" role="tablist">
 
-      <a class="nav-item nav-link active  text-danger" id="nav-home-tab" data-toggle="tab" href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todas as postagens</a>
+      <a class="nav-item nav-link active  text-danger" id="nav-home-tab" data-toggle="tab" (click)='todasPostagens()' role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todas as postagens</a>
 
-      <a class="nav-item nav-link text-danger" id="nav-profile-tab" data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas Postagens</a>
+      <a class="nav-item nav-link text-danger" id="nav-profile-tab" data-toggle="tab" (click)='minhasPostagens()' role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas Postagens</a>
 
-      <a class="nav-item nav-link text-danger" id="nav-contact-tab" data-toggle="tab" href="#temaPostagens" role="tab" aria-controls="nav-temaPostagens" aria-selected="false">Postagens por tema</a>
+      <a class="nav-item nav-link text-danger" id="nav-contact-tab" data-toggle="tab" (click)='temaPostagens()' role="tab" aria-controls="nav-temaPostagens" aria-selected="false">Postagens por tema</a>
 
     </div>
   </nav>

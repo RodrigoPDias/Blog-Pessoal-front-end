@@ -19,5 +19,33 @@ export class InicioComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
   }
+  verPostagens(){
+    let x = document.querySelector("#postagens")
+    if(x){
+      x.scrollIntoView()
+      console.log("estouAqui")
+    }
+  }
+  todasPostagens(){
+    let x = document.querySelector("#todasPostagens")
+    if(x){
+      x.scrollIntoView()
+      console.log("estouAqui")
+    }
+  }
+  minhasPostagens(){
+    let x = document.querySelector("#minhasPostagens")
+    if(x){
+      x.scrollIntoView()
+      console.log("estouAqui")
+    }
+  }
+  temaPostagens(){
+    let x = document.querySelector("#temaPostagens")
+    if(x){
+      x.scrollIntoView()
+      console.log("estouAqui")
+    }
+  }
 
 }
