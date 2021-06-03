@@ -10,10 +10,10 @@
 
       <div class="row justify-content-center ">
         <div class="col-md-3  mt-3 mb-3">
-          <input type="text" class="form-control" id="descricao" placeholder="Ditigite a descricao do tema">
+          <input [(ngModel)]='tema.descricao' type="text" class="form-control" id="descricao" placeholder="Ditigite a descricao do tema">
         </div>
         <div class="d-flex justify-content-center mb-2">
-            <button class="btn btn-dark">Cadastrar</button>
+            <button class="btn btn-dark" (click)='cadastrar()' >Cadastrar</button>
         </div>
       </div>
     </div>
@@ -31,28 +31,19 @@
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Primeiro</th>
-              <th scope="col">Último</th>
-              <th scope="col">Nickname</th>
+              <th scope="col">Descrição</th>
+              <th scope="col" class="text-right">Modificações</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr *ngFor="let tema of listaTema">
               <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
+              <td>{{tema.id}}</td>
+              <td>{{tema.descricao}}</td>
+              <td class="d-flex justify-content-end">
+                <button class="btn btn-info mr-3">Editar</button>
+                <button class="btn btn-danger">Apagar</button>
+              </td>
             </tr>
           </tbody>
         </table>
