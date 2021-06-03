@@ -1,12 +1,12 @@
 <div class="container-fluid">
-  <div class="row" style="background-color:  rgb(39, 196, 143);">
+  <div class="row" style="background-color:  #18285a;">
     <div class="col-md-12 text-dark">
 
       <a routerLink='/inicio' class="text-dark text-left">
         <i class="fa fa-angle-double-left" aria-hidden="true"></i> inicio
       </a>
       <H1 class="fs-54 text-center" style="color: red;" >Temas</H1>
-      <h5 class="fs-18 text-center " >Veja aqui todos os temas cadastrados ou cadastre um novo:</h5>
+      <h5 class="fs-18 text-center text-light " >Veja aqui todos os temas cadastrados ou cadastre um novo:</h5>
 
       <div class="row justify-content-center ">
         <div class="col-md-3  mt-3 mb-3">
@@ -30,17 +30,16 @@
         <table class="table table-hover table-dark">
           <thead>
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">Descrição</th>
-              <th scope="col" class="text-right">Modificações</th>
+              <th scope="col"><p>#</p></th>
+              <th scope="col"><p> Descrição</p></th>
+              <th scope="col " ><p class="text-center" >Modificações</p> </th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let tema of listaTema">
-              <th scope="row">1</th>
-              <td>{{tema.id}}</td>
-              <td>{{tema.descricao}}</td>
-              <td class="d-flex justify-content-end">
+              <th scope="row">{{tema.id}}</th>
+              <td >{{tema.descricao}}</td>
+              <td class="d-flex justify-content-center db-3">
                 <button class="btn btn-info mr-3">Editar</button>
                 <button class="btn btn-danger">Apagar</button>
               </td>
