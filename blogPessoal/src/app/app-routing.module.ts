@@ -12,6 +12,7 @@ const routes: Routes = [
   {path:'entrar', component:EntrarComponent},
   {path:'cadastrar', component:CadastrarComponent},
   {path:'tema',component:TemaComponent}
+
 ];
 
 @NgModule({
