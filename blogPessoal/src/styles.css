@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 .gradient {
   /* Colors generated on: https://colorhunt.co/palette/179481 */
-  background: linear-gradient(45deg, #53bdd6, #3c8f99, #6177db, #ebe0d0,#cdc2b6);
-  background-size: 500% 500%;
-  animation: colors 10s ease infinite;
+  background: linear-gradient(45deg, #1a557c, #3282b8, #0f4c75, #1b262c);
+  background-size: 300% 300%;
+  animation: colors 8s ease infinite;
 }
 
 @keyframes colors {
@@ -17,6 +17,11 @@
     background-position: 0% 50%;
   }
 }
+
+html{
+  scroll-behavior: smooth;
+}
+
 
 .fs-100{
   font-size: 100pt;
