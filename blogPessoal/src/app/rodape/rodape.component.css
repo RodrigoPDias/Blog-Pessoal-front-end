@@ -1,11 +1,11 @@
 ul.social-network{
-    list-style: nome;
-    padding: 0;
+  list-style: nome;
+  padding: 0;
 }
 ul.social-network li{
-    display: inline;
-    margin: 0;
-    margin: 5px;
+  display: inline;
+  margin: 0;
+  margin: 5px;
 }
 .fa{
 
@@ -14,11 +14,11 @@ color: white;
 padding: 10px;
 }
 .fa-facebook-official:hover{
- color: #3b5998;
+color: #3b5998;
 }
 .fa-instagram:hover{
-    color: #c13584;
+  color: #c13584;
 }
 .fa-linkedin:hover{
-    color: #0072b1;
+  color: #0072b1;
 }

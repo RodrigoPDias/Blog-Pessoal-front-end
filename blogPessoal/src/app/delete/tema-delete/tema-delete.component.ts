@@ -1,8 +1,8 @@
-import { Tema } from 'src/app/model/Tema';
+import { environment } from './../../../environments/environment.prod';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TemaService } from './../../service/tema.service';
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment.prod';
-import { TemaService } from 'src/app/service/tema.service';
+import { Tema } from 'src/app/model/Tema';
 
 @Component({
   selector: 'app-tema-delete',
@@ -27,23 +27,22 @@ export class TemaDeleteComponent implements OnInit {
     }
 
     this.idTema = this.route.snapshot.params['id']
-    this.findByIdTema(this.idTema)
+  this.findByIdTema(this.idTema)
   }
 
-  findByIdTema(id:number){
-    this.temaService.getByIdTema(id).subscribe((resp: Tema)=>{
+  findByIdTema(id: number) {
+    this.temaService.getByIdTema(id).subscribe((resp: Tema) => {
       this.tema = resp
     })
-
   }
 
-  apagar(){
-    this.temaService.deleteTema(this.idTema).subscribe(()=>{
-      alert('O tema foi Apagado com Sucesso!')
+  delete() {
+    this.temaService.deleteTema(this.idTema).subscribe(() => {
+      alert('Tema apagado com sucesso!')
       this.router.navigate(['/tema'])
     })
-
-
   }
 
 }
+
+

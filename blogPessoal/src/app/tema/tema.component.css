@@ -1,0 +1,6 @@
+h1{
+  background-image: url('https://i.imgur.com/Cc7J2Y8.jpg');
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+

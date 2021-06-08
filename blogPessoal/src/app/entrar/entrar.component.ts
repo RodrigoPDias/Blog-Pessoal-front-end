@@ -1,9 +1,9 @@
-import { AuthService } from './../../service/auth.service';
 import { UserLogin } from './../model/UserLogin';
 
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-entrar',
@@ -15,7 +15,7 @@ export class EntrarComponent implements OnInit {
   userLogin: UserLogin = new UserLogin
 
   constructor(
-    private authService: AuthService,
+    private auth: AuthService,
     private router: Router
 
   ) { }
@@ -24,7 +24,7 @@ export class EntrarComponent implements OnInit {
     window.scroll(0,0)
   }
   entrar(){
-    this.authService.entrar(this.userLogin).subscribe((resp:UserLogin)=>{
+    this.auth.entrar(this.userLogin).subscribe((resp:UserLogin)=>{
     this.userLogin = resp
 
     environment.token = this.userLogin.token

@@ -1,22 +1,29 @@
-import { TemaDeleteComponent } from './delele/tema-delete/tema-delete.component';
-import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
-import { TemaComponent } from './tema/tema.component';
 import { InicioComponent } from './inicio/inicio.component';
-import { Component, NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { EntrarComponent } from './entrar/entrar.component';
+import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
+import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
+import { TemaComponent } from './tema/tema.component';
+
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
+import { MenuComponent } from './menu/menu.component';
+import { RodapeComponent } from './rodape/rodape.component';
+
 
 const routes: Routes = [
   {path:'', redirectTo:'entrar', pathMatch:'full'},
 
-  {path:'inicio', component:InicioComponent },
-  {path:'entrar', component:EntrarComponent},
-  {path:'cadastrar', component:CadastrarComponent},
-  {path:'tema',component:TemaComponent},
-  {path:'tema-edit/:id',component:TemaEditComponent},
-  {path:'tema-delete/:id',component:TemaDeleteComponent}
 
+  {path:'rodape', component:RodapeComponent},
+  {path:'cadastrar',component:CadastrarComponent},
+  {path:'menu', component:MenuComponent},
+  {path:'entrar',component:EntrarComponent},
+  {path:'inicio',component:InicioComponent},
+  {path:'tema', component:TemaComponent},
+  {path:'tema-edit/:id', component: TemaEditComponent},
+  {path:'tema-delete/:id', component: TemaDeleteComponent}
 ];
 
 @NgModule({
