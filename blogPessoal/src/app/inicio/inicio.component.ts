@@ -20,7 +20,7 @@ export class InicioComponent implements OnInit {
 
   tema: Tema = new Tema()
   listaTema: Tema[]
-  idtema: number
+  idTema: number
 
   user:User = new User()
   idUser = environment.id
@@ -55,7 +55,7 @@ export class InicioComponent implements OnInit {
   }
 
   findByIdTema(){
-    this.temaService.getByIdTema(this.idtema).subscribe((resp: Tema)=>{
+    this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema)=>{
       this.tema =resp
     })
   }
@@ -66,7 +66,7 @@ export class InicioComponent implements OnInit {
   }
 
   publicar(){
-    this.tema.id =this.idtema
+    this.tema.id =this.idTema
     this.postagem.tema = this.tema
 
     this.user.id = this.idUser

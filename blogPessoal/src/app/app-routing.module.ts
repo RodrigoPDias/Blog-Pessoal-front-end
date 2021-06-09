@@ -10,20 +10,27 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
+import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
+import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 
 
 const routes: Routes = [
   {path:'', redirectTo:'entrar', pathMatch:'full'},
 
-
-  {path:'rodape', component:RodapeComponent},
-  {path:'cadastrar',component:CadastrarComponent},
   {path:'menu', component:MenuComponent},
+  {path:'rodape', component:RodapeComponent},
+
+  {path:'cadastrar',component:CadastrarComponent},
   {path:'entrar',component:EntrarComponent},
+
   {path:'inicio',component:InicioComponent},
   {path:'tema', component:TemaComponent},
+
   {path:'tema-edit/:id', component: TemaEditComponent},
-  {path:'tema-delete/:id', component: TemaDeleteComponent}
+  {path:'tema-delete/:id', component: TemaDeleteComponent},
+  {path:'postagem-edit/:id',component:PostagemEditComponent},
+  {path:'postagem-delete/:id',component:PostagemDeleteComponent},
+
 ];
 
 @NgModule({
